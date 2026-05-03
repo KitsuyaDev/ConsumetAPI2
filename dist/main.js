@@ -20,7 +20,7 @@ const anime_1 = __importDefault(require("./routes/anime"));
 const manga_1 = __importDefault(require("./routes/manga"));
 const comics_1 = __importDefault(require("./routes/comics"));
 const light_novels_1 = __importDefault(require("./routes/light-novels"));
-const movies_1 = __importDefault(require("./routes/movies"));
+// const movies_1 = __importDefault(require("./routes/movies")); // Removed
 const meta_1 = __importDefault(require("./routes/meta"));
 const news_1 = __importDefault(require("./routes/news"));
 const chalk_1 = __importDefault(require("chalk"));
@@ -133,7 +133,7 @@ exports.tmdbApi = process.env.TMDB_KEY && process.env.TMDB_KEY;
     await fastify.register(manga_1.default, { prefix: '/manga' });
     await fastify.register(comics_1.default, { prefix: '/comics' });
     await fastify.register(light_novels_1.default, { prefix: '/light-novels' });
-    await fastify.register(movies_1.default, { prefix: '/movies' });
+    // await fastify.register(movies_1.default, { prefix: '/movies' }); // Removed
     await fastify.register(meta_1.default, { prefix: '/meta' });
     await fastify.register(news_1.default, { prefix: '/news' });
     await fastify.register(utils_1.default, { prefix: '/utils' });
